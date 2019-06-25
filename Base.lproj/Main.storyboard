@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="423" y="-754"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Photo View Controller-->
         <scene sceneID="uQB-J2-g2b">
             <objects>
-                <viewController id="anS-ZY-6Hn" sceneMemberID="viewController">
+                <viewController id="anS-ZY-6Hn" customClass="AddPhotoViewController" customModule="JesseniaViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvF-gA-4PM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,34 +61,54 @@
                                     <navigationItem title="Add New Photo" id="249-Fo-YL7"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPi-BN-TNh">
-                                <rect key="frame" x="104" y="514" width="194" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-dd-NdX">
-                                <rect key="frame" x="21" y="698" width="138" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Photo Library"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="puppy3-1" translatesAutoresizingMaskIntoConstraints="NO" id="8qA-qi-Dsp">
                                 <rect key="frame" x="60" y="207" width="291" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-L8-RPV">
-                                <rect key="frame" x="164" y="122" width="82" height="41"/>
+                                <rect key="frame" x="20" y="448" width="82" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="anS-ZY-6Hn" eventType="touchUpInside" id="Izq-FR-6m2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-BJ-jQg">
-                                <rect key="frame" x="294" y="702" width="79" height="41"/>
+                                <rect key="frame" x="315" y="448" width="79" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albumTapped:" destination="anS-ZY-6Hn" eventType="touchUpInside" id="JoK-tc-yuj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-n9-SiI">
+                                <rect key="frame" x="166" y="521" width="78" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="caption"/>
+                                <connections>
+                                    <action selector="captionTapped:" destination="anS-ZY-6Hn" eventType="touchUpInside" id="UIg-n0-syI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRh-ku-tqc">
+                                <rect key="frame" x="181" y="570" width="49" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="anS-ZY-6Hn" eventType="touchUpInside" id="UCz-ui-1iW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-dd-NdX">
+                                <rect key="frame" x="138" y="448" width="138" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="anS-ZY-6Hn" eventType="touchUpInside" id="waI-rJ-ncO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0f6-4b-qL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="-754.01785714285711"/>
+            <point key="canvasLocation" x="1232" y="-754"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J4P-eK-yT1">
